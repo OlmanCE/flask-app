@@ -12,5 +12,3 @@ CREATE TABLE users (
   linkedIn TEXT,
   socialMedia TEXT
 );
-
-DROP TABLE IF EXISTS posts;
