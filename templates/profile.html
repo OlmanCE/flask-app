@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Usuario</title>
+</head>
+<body>
+    <h1>Perfil de {{ profile['username'] }}</h1>
+    <p><strong>Correo Electrónico:</strong> {{ profile['email'] }}</p>
+    <p><strong>Nombre Completo:</strong> {{ profile['fullName'] }}</p>
+    <p><strong>Dirección:</strong> {{ profile['address'] }}</p>
+    <p><strong>Fecha de Nacimiento:</strong> {{ profile['birthday'] }}</p>
+    <p><strong>LinkedIn:</strong> <a href="{{ profile['linkedIn'] }}">{{ profile['linkedIn'] }}</a></p>
+    <p><strong>Red Social:</strong> <a href="{{ profile['socialMedia'] }}">{{ profile['socialMedia'] }}</a></p>
+    <p><strong>Contraseña:</strong> ********</p>
+    <img src="{{ profile['pictureURL'] }}" alt="Avatar del Usuario" style="width: 150px; height: 150px;"><br>
+    <a href="{{ url_for('edit_profile', username=profile['username']) }}">Editar Perfil</a><br>
+    <a href="{{ url_for('logout') }}">Cerrar Sesión</a>
+</body>
+</html>
